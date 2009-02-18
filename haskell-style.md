@@ -142,7 +142,7 @@ Comment every exported data type.  Some examples:
     -- responsible for ensuring that all data has been sent.
     send :: Socket      -- ^ Connected socket
          -> ByteString  -- ^ Data to send
-         -> IO          -- ^ Bytes sent
+         -> IO Int      -- ^ Bytes sent
 
     -- | Bla bla bla.
     data Person = Person
@@ -176,8 +176,9 @@ types.  There are a few exceptions that are widely used.
 1. QuickCheck properties use a `prop_` prefix.
 2. FFI wrapper use a `c_` prefix.
 
-For readability reasons don't capitalize all letters when using an
-abbreviation.  Exception: Two letter abbreviations, e.g. `IO`.
+For readability reasons, don't capitalize all letters when using an
+abbreviation.  For example, write `HttpServer` instead of
+`HTTPServer`.  Exception: Two letter abbreviations, e.g. `IO`.
 
 5. Misc
 -------
