@@ -7,6 +7,5 @@ project. It is much easier to understand a large codebase when all the
 code in it is in a consistent style.
 
 This project holds the style guidelines I use for my code.  If you are
-modifying a project that originated was created by me, you may be
-pointed to this page to see the style guides that apply to that
-project.
+modifying a project that was created by me, you may be pointed to this
+style guide.
