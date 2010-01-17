@@ -108,6 +108,21 @@ your judgement. Some examples:
           alloca 20 $ \b ->
           cFunction a b
 
+### Export Lists
+
+Format export lists as follows:
+
+    module Data.Set
+        (
+          -- * The @Set@ type
+          Set
+        , empty
+        , singleton
+
+          -- * Querying
+        , member
+        ) where
+
 2. Imports
 ----------
 
