@@ -63,6 +63,12 @@ Align the constructors in a data type definition.  Example:
     data Tree a = Branch a (Tree a) (Tree a)
                 | Leaf
 
+For long type names the following formatting is also acceptable:
+
+    data HttpException
+        = InvalidStatusCode Int
+        | MissingContentHeader
+
 Format records as follows:
 
     data Person = Person
