@@ -192,10 +192,7 @@ comments for data type definitions.  Some examples:
 ---------
 
 Use mixed-case when naming functions and camel-case when naming data
-types.  There are a few exceptions that are widely used.
-
-1. QuickCheck properties use a `prop_` prefix.
-2. FFI wrapper use a `c_` prefix.
+types.
 
 For readability reasons, don't capitalize all letters when using an
 abbreviation.  For example, write `HttpServer` instead of
