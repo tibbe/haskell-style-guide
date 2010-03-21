@@ -172,7 +172,7 @@ Comment every exported data type.  Some examples:
         }
 
 For functions the documentation should give enough information to
-apply the function without looking at the functions definition.
+apply the function without looking at the function's definition.
 
 ### End-of-Line Comments
 
