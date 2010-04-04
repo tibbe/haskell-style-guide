@@ -99,7 +99,7 @@ You may or may not indent the code following a "hanging" lambda.  Use
 your judgement. Some examples:
 
     bar :: IO ()
-    bar = forM_ [1, 2, 3] $ \n ->
+    bar = forM_ [1, 2, 3] $ \n -> do
               putStrLn "Here comes a number!"
               print n
 
