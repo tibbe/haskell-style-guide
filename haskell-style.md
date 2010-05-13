@@ -77,6 +77,24 @@ Format records as follows:
         , age       :: Int     -- ^ Age
         } deriving (Eq, Show)
 
+### List Declarations
+
+Align the elements in the list.  Example:
+
+    exceptions =
+        [ InvalidStatusCode
+        , MissingContentHeader
+        , InternalServerError
+        ]
+
+Optionally, you can skip the first newline.  Use your judgement.
+
+    directions = [ North
+                 , East
+                 , South
+                 , West
+                 ]
+
 ### Pragmas
 
 Put pragmas immediately following the function they apply to.
