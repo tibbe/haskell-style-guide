@@ -52,7 +52,7 @@ are large.  Use your judgement.
 ### Whitespace
 
 Surround binary operators with a single space on either side.  Use
-your better judgment for the insertion of spaces around arithmetic
+your better judgement for the insertion of spaces around arithmetic
 operators but always be consistent about whitespace on either side of
 a binary operator.  Don't insert a space after a lambda.
 
