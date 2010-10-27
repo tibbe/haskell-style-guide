@@ -160,11 +160,6 @@ changes in these libraries.  Exception: The Prelude.
 3. Comments
 -----------
 
-### Line Length
-
-Maximum line length is *70 characters*.  This increases readability as
-the eye has to travel back to the start of the next line.
-
 ### Punctuation
 
 Write proper sentences; start with a capital letter and use proper
@@ -205,6 +200,19 @@ comments for data type definitions.  Some examples:
     foo n = salt * 32 + 9
       where
         salt = 453645243  -- Magic hash salt.
+
+### Links
+
+Use in-line links economically.  You are encouraged to add links for
+API names.  It is not necessary to add links for all API names in a
+Haddock comment.  We therefore recommend adding a link to an API name
+if:
+
+* The user might actually want to click on it for more information (in
+  your judgment), and
+
+* Only for the first occurrence of each API name in the comment (don't
+  bother repeating a link)
 
 4. Naming
 ---------
