@@ -6,17 +6,8 @@ this project.  I've tried to cover the major areas of formatting and
 naming.  When something isn't covered by this guide you should stay
 consistent with the code in the other modules.
 
-Table of Contents
------------------
-
-1. Formatting
-2. Imports
-3. Comments
-4. Naming
-5. Misc
-
-1. Formatting
--------------
+Formatting
+----------
 
 ### Line Length
 
@@ -141,8 +132,8 @@ Format export lists as follows:
         , member
         ) where
 
-2. Imports
-----------
+Imports
+-------
 
 Imports should be grouped in the following order:
 
@@ -157,8 +148,8 @@ Always use explicit import lists or `qualified` imports for standard
 and third party libraries.  This makes the code more robust against
 changes in these libraries.  Exception: The Prelude.
 
-3. Comments
------------
+Comments
+--------
 
 ### Punctuation
 
@@ -214,8 +205,8 @@ if:
 * Only for the first occurrence of each API name in the comment (don't
   bother repeating a link)
 
-4. Naming
----------
+Naming
+------
 
 Use mixed-case when naming functions and camel-case when naming data
 types.
@@ -224,8 +215,8 @@ For readability reasons, don't capitalize all letters when using an
 abbreviation.  For example, write `HttpServer` instead of
 `HTTPServer`.  Exception: Two letter abbreviations, e.g. `IO`.
 
-5. Misc
--------
+Misc
+----
 
 ### Warnings ###
 
