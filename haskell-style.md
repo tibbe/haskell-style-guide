@@ -215,6 +215,12 @@ For readability reasons, don't capitalize all letters when using an
 abbreviation.  For example, write `HttpServer` instead of
 `HTTPServer`.  Exception: Two letter abbreviations, e.g. `IO`.
 
+### Modules
+
+Use singular when naming modules e.g. use `Data.Map` and
+`Data.ByteString.Internal` instead of `Data.Maps` and
+`Data.ByteString.Internals`.
+
 Misc
 ----
 
