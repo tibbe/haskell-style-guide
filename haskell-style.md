@@ -224,10 +224,10 @@ Haddock comment.  We therefore recommend adding a link to an API name
 if:
 
 * The user might actually want to click on it for more information (in
-your judgment), and
+  your judgment), and
 
 * Only for the first occurrence of each API name in the comment (don't
-bother repeating a link)
+  bother repeating a link)
 
 Naming
 ------
