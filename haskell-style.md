@@ -20,18 +20,20 @@ with *4 spaces*.  Indent the `where` keyword two spaces to set it
 apart from the rest of the code and indent the definitions in a
 `where` clause 2 spaces. Some examples:
 
-    sayHello :: IO ()
-    sayHello = do
-        name <- getLine
-        putStrLn $ greeting name
-      where
-        greeting name = "Hello, " ++ name ++ "!"
+```haskell
+sayHello :: IO ()
+sayHello = do
+    name <- getLine
+    putStrLn $ greeting name
+  where
+    greeting name = "Hello, " ++ name ++ "!"
 
-    filter :: (a -> Bool) -> [a] -> [a]
-    filter _ []     = []
-    filter p (x:xs)
-        | p x       = x : filter p xs
-        | otherwise = filter p xs
+filter :: (a -> Bool) -> [a] -> [a]
+filter _ []     = []
+filter p (x:xs)
+    | p x       = x : filter p xs
+    | otherwise = filter p xs
+```
 
 ### Blank Lines
 
@@ -51,86 +53,104 @@ a binary operator.  Don't insert a space after a lambda.
 
 Align the constructors in a data type definition.  Example:
 
-    data Tree a = Branch a (Tree a) (Tree a)
-                | Leaf
+```haskell
+data Tree a = Branch a (Tree a) (Tree a)
+            | Leaf
+```
 
 For long type names the following formatting is also acceptable:
 
-    data HttpException
-        = InvalidStatusCode Int
-        | MissingContentHeader
+```haskell
+data HttpException
+    = InvalidStatusCode Int
+    | MissingContentHeader
+```
 
 Format records as follows:
 
-    data Person = Person
-        { firstName :: String  -- ^ First name
-        , lastName  :: String  -- ^ Last name
-        , age       :: Int     -- ^ Age
-        } deriving (Eq, Show)
+```haskell
+data Person = Person
+    { firstName :: String  -- ^ First name
+    , lastName  :: String  -- ^ Last name
+    , age       :: Int     -- ^ Age
+    } deriving (Eq, Show)
+```
 
 ### List Declarations
 
 Align the elements in the list.  Example:
 
-    exceptions =
-        [ InvalidStatusCode
-        , MissingContentHeader
-        , InternalServerError
-        ]
+```haskell
+exceptions =
+    [ InvalidStatusCode
+    , MissingContentHeader
+    , InternalServerError
+    ]
+```
 
 Optionally, you can skip the first newline.  Use your judgement.
 
-    directions = [ North
-                 , East
-                 , South
-                 , West
-                 ]
+```haskell
+directions = [ North
+             , East
+             , South
+             , West
+             ]
+```
 
 ### Pragmas
 
 Put pragmas immediately following the function they apply to.
 Example:
 
-    id :: a -> a
-    id x = x
-    {-# INLINE id #-}
+```haskell
+id :: a -> a
+id x = x
+{-# INLINE id #-}
+```
 
 In the case of data type definitions you must put the pragma before
 the type it applies to.  Example:
 
-    data Array e = Array
-        {-# UNPACK #-} !Int
-        !ByteArray
+```haskell
+data Array e = Array
+    {-# UNPACK #-} !Int
+    !ByteArray
+```
 
 ### Hanging Lambdas
 
 You may or may not indent the code following a "hanging" lambda.  Use
 your judgement. Some examples:
 
-    bar :: IO ()
-    bar = forM_ [1, 2, 3] $ \n -> do
-              putStrLn "Here comes a number!"
-              print n
+```haskell
+bar :: IO ()
+bar = forM_ [1, 2, 3] $ \n -> do
+          putStrLn "Here comes a number!"
+          print n
 
-    foo :: IO ()
-    foo = alloca 10 $ \a ->
-          alloca 20 $ \b ->
-          cFunction a b
+foo :: IO ()
+foo = alloca 10 $ \a ->
+      alloca 20 $ \b ->
+      cFunction a b
+```
 
 ### Export Lists
 
 Format export lists as follows:
 
-    module Data.Set
-        (
-          -- * The @Set@ type
-          Set
-        , empty
-        , singleton
+```haskell
+module Data.Set
+    (
+      -- * The @Set@ type
+      Set
+    , empty
+    , singleton
 
-          -- * Querying
-        , member
-        ) where
+      -- * Querying
+    , member
+    ) where
+```
 
 Imports
 -------
@@ -162,18 +182,20 @@ Comment every top level function (particularly exported functions),
 and provide a type signature; use Haddock syntax in the comments.
 Comment every exported data type.  Some examples:
 
-    -- | Send a message on a socket.  The socket must be in a connected
-    -- state.  Returns the number of bytes sent.  Applications are
-    -- responsible for ensuring that all data has been sent.
-    send :: Socket      -- ^ Connected socket
-         -> ByteString  -- ^ Data to send
-         -> IO Int      -- ^ Bytes sent
+```haskell
+-- | Send a message on a socket.  The socket must be in a connected
+-- state.  Returns the number of bytes sent.  Applications are
+-- responsible for ensuring that all data has been sent.
+send :: Socket      -- ^ Connected socket
+     -> ByteString  -- ^ Data to send
+     -> IO Int      -- ^ Bytes sent
 
-    -- | Bla bla bla.
-    data Person = Person
-        { age  :: Int     -- ^ Age
-        , name :: String  -- ^ First name
-        }
+-- | Bla bla bla.
+data Person = Person
+    { age  :: Int     -- ^ Age
+    , name :: String  -- ^ First name
+    }
+```
 
 For functions the documentation should give enough information to
 apply the function without looking at the function's definition.
@@ -183,14 +205,16 @@ apply the function without looking at the function's definition.
 Separate end-of-line comments from the code using 2 spaces.  Align
 comments for data type definitions.  Some examples:
 
-    data Parser = Parser
-        Int         -- Current position
-        ByteString  -- Remaining input
+```haskell
+data Parser = Parser
+    Int         -- Current position
+    ByteString  -- Remaining input
 
-    foo :: Int -> Int
-    foo n = salt * 32 + 9
-      where
-        salt = 453645243  -- Magic hash salt.
+foo :: Int -> Int
+foo n = salt * 32 + 9
+  where
+    salt = 453645243  -- Magic hash salt.
+```
 
 ### Links
 
@@ -200,10 +224,10 @@ Haddock comment.  We therefore recommend adding a link to an API name
 if:
 
 * The user might actually want to click on it for more information (in
-  your judgment), and
+your judgment), and
 
 * Only for the first occurrence of each API name in the comment (don't
-  bother repeating a link)
+bother repeating a link)
 
 Naming
 ------
