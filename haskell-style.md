@@ -180,7 +180,7 @@ punctuation.
 
 Comment every top level function (particularly exported functions),
 and provide a type signature; use Haddock syntax in the comments.
-Comment every exported data type.  Some examples:
+Comment every exported data type.  Function example:
 
 ```haskell
 -- | Send a message on a socket.  The socket must be in a connected
@@ -189,7 +189,14 @@ Comment every exported data type.  Some examples:
 send :: Socket      -- ^ Connected socket
      -> ByteString  -- ^ Data to send
      -> IO Int      -- ^ Bytes sent
+```
 
+For functions the documentation should give enough information to
+apply the function without looking at the function's definition.
+
+Record example:
+
+```haskell
 -- | Bla bla bla.
 data Person = Person
     { age  :: Int     -- ^ Age
@@ -197,8 +204,19 @@ data Person = Person
     }
 ```
 
-For functions the documentation should give enough information to
-apply the function without looking at the function's definition.
+For fields that require longer comments format them like so:
+
+```haskell
+data Record = Record
+    { -- | This is a very very very long comment that is split over
+      -- multiple lines.
+      field1 :: Text
+      
+      -- | This is a second very very very long comment that is split
+      -- over multiple lines.
+    , field2 :: Int
+    }
+```
 
 ### End-of-Line Comments
 
