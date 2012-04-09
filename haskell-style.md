@@ -152,6 +152,44 @@ module Data.Set
     ) where
 ```
 
+### If-then-else clauses
+
+Generally, guards and pattern matches should be preferred over if-then-else
+clauses, where possible.  Short cases should usually be put on a single line
+(when line length allows it).
+
+Otherwise, you should be consistent with the 4-spaces indent rule, and the
+`then` and the `else` keyword should be aligned.  Examples:
+
+```haskell
+foo = do
+    someCode
+    if condition
+        then someMoreCode
+        else someAlternativeCode
+```
+
+```haskell
+foo = bar $ \qux -> if predicate qux
+    then doSomethingSilly
+    else someOtherCode
+```
+
+The same rule applies to nested do blocks:
+
+```haskell
+foo = do
+    instruction <- decodeInstruction
+    skip <- load Memory.skip
+    if skip == 0x0000
+        then do
+            execute instruction
+            addCycles $ instructionCycles instruction
+        else do
+            store Memory.skip 0x0000
+            addCycles 1
+```
+
 Imports
 -------
 
