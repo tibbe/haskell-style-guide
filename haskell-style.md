@@ -200,6 +200,27 @@ foo = do
             addCycles 1
 ```
 
+### Case expressions
+
+The alternatives in a case expression can be indented using either of
+the two following styles:
+
+```haskell
+foobar = case something of
+    Just j -> foo
+    Nothing -> bar
+```
+
+or as
+
+```haskell
+foobar = case something of
+             Just j -> foo
+             Nothing -> bar
+```
+
+Align the `->` arrows when it helps readability.
+
 Imports
 -------
 
