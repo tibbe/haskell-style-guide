@@ -54,7 +54,7 @@ a binary operator.  Don't insert a space after a lambda.
 Align the constructors in a data type definition.  Example:
 
 ```haskell
-data Tree a = Branch a (Tree a) (Tree a)
+data Tree a = Branch !a !(Tree a) !(Tree a)
             | Leaf
 ```
 
@@ -207,7 +207,7 @@ the two following styles:
 
 ```haskell
 foobar = case something of
-    Just j -> foo
+    Just j  -> foo
     Nothing -> bar
 ```
 
@@ -215,7 +215,7 @@ or as
 
 ```haskell
 foobar = case something of
-             Just j -> foo
+             Just j  -> foo
              Nothing -> bar
 ```
 
@@ -340,9 +340,9 @@ By default, use strict data types and lazy functions.
 ### Data types
 
 Constructor fields should be strict, unless there's an explicit reason
-to make them lazy. This avoids many common pitfalls caused by
-too much laziness and reduces the amount of brain cycles the
-programmer has to spend on thinking about evaluation order.
+to make them lazy. This avoids many common pitfalls caused by too much
+laziness and reduces the number of brain cycles the programmer has to
+spend thinking about evaluation order.
 
 ```haskell
 -- Good
