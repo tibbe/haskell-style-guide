@@ -405,6 +405,15 @@ mysum = go 0
 Misc
 ----
 
+### Point-free style ###
+
+Avoid over-using point-free style. For example, this is hard to read:
+
+```haskell
+# Bad:
+f = (g .) . h
+```
+
 ### Warnings ###
 
 Code should be compilable with `-Wall -Werror`. There should be no
