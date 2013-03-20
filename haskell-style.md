@@ -410,7 +410,7 @@ Misc
 Avoid over-using point-free style. For example, this is hard to read:
 
 ```haskell
-# Bad:
+-- Bad:
 f = (g .) . h
 ```
 
