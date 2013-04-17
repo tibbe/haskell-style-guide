@@ -319,7 +319,7 @@ if:
 Naming
 ------
 
-Use mixed-case when naming functions and camel-case when naming data
+Use CamelCase when naming functions and initial case when naming data
 types.
 
 For readability reasons, don't capitalize all letters when using an
