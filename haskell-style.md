@@ -319,8 +319,8 @@ if:
 Naming
 ------
 
-Use mixed-case when naming functions and camel-case when naming data
-types.
+Use camel case (e.g. `functionName`) when naming functions and upper
+camel case (e.g. `DataType`) when naming data types.
 
 For readability reasons, don't capitalize all letters when using an
 abbreviation.  For example, write `HttpServer` instead of
