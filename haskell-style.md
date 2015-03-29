@@ -160,7 +160,7 @@ clauses, where possible.  Short cases should usually be put on a single line
 
 When writing non-monadic code (i.e. when not using `do`) and guards
 and pattern matches can't be used, you can align if-then-else clauses
-you like you would normal expressions:
+like you would normal expressions:
 
 ```haskell
 foo = if ...
