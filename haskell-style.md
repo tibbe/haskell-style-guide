@@ -15,10 +15,10 @@ Maximum line length is *80 characters*.
 
 ### Indentation
 
-Tabs are illegal. Use spaces for indenting.  Indent your code blocks
+Tabs are illegal.  Use spaces for indenting.  Indent your code blocks
 with *4 spaces*.  Indent the `where` keyword two spaces to set it
 apart from the rest of the code and indent the definitions in a
-`where` clause 2 spaces. Some examples:
+`where` clause 2 spaces.  Some examples:
 
 ```haskell
 sayHello :: IO ()
@@ -39,7 +39,7 @@ filter p (x:xs)
 
 One blank line between top-level definitions.  No blank lines between
 type signatures and function definitions.  Add one blank line between
-functions in a type class instance declaration if the functions bodies
+functions in a type class instance declaration if the function bodies
 are large.  Use your judgement.
 
 ### Whitespace
@@ -121,7 +121,7 @@ data Array e = Array
 ### Hanging Lambdas
 
 You may or may not indent the code following a "hanging" lambda.  Use
-your judgement. Some examples:
+your judgement.  Some examples:
 
 ```haskell
 bar :: IO ()
@@ -280,7 +280,7 @@ data Record = Record
     { -- | This is a very very very long comment that is split over
       -- multiple lines.
       field1 :: !Text
-      
+
       -- | This is a second very very very long comment that is split
       -- over multiple lines.
     , field2 :: !Int
@@ -340,7 +340,7 @@ By default, use strict data types and lazy functions.
 ### Data types
 
 Constructor fields should be strict, unless there's an explicit reason
-to make them lazy. This avoids many common pitfalls caused by too much
+to make them lazy.  This avoids many common pitfalls caused by too much
 laziness and reduces the number of brain cycles the programmer has to
 spend thinking about evaluation order.
 
@@ -376,13 +376,13 @@ As an alternative to the `UNPACK` pragma, you can put
 {-# OPTIONS_GHC -funbox-strict-fields #-}
 ```
 
-at the top of the file. Including this flag in the file inself instead
+at the top of the file.  Including this flag in the file itself instead
 of e.g. in the Cabal file is preferable as the optimization will be
 applied even if someone compiles the file using other means (i.e. the
 optimization is attached to the source code it belongs to).
 
 Note that `-funbox-strict-fields` applies to all strict fields, not
-just small fields (e.g. `Double` or `Int`). If you're using GHC 7.4 or
+just small fields (e.g. `Double` or `Int`).  If you're using GHC 7.4 or
 later you can use `NOUNPACK` to selectively opt-out for the unpacking
 enabled by `-funbox-strict-fields`.
 
@@ -407,7 +407,7 @@ Misc
 
 ### Point-free style ###
 
-Avoid over-using point-free style. For example, this is hard to read:
+Avoid over-using point-free style.  For example, this is hard to read:
 
 ```haskell
 -- Bad:
@@ -416,5 +416,5 @@ f = (g .) . h
 
 ### Warnings ###
 
-Code should be compilable with `-Wall -Werror`. There should be no
+Code should be compilable with `-Wall -Werror`.  There should be no
 warnings.
