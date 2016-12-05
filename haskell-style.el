@@ -41,6 +41,9 @@
   (setq tab-width 4
         haskell-indentation-layout-offset 4
         haskell-indentation-left-offset 4
-        haskell-indentation-ifte-offset 4))
+        haskell-indentation-ifte-offset 4
+        hi2-layout-offset haskell-indentation-layout-offset
+        hi2-left-offset haskell-indentation-left-offset
+        hi2-ifte-offset haskell-indentation-ifte-offset))
 
 (provide 'haskell-style)
