@@ -118,6 +118,12 @@ data Array e = Array
     !ByteArray
 ```
 
+It is also recommended to include a [SafeHaskell](https://ghc.haskell.org/trac/ghc/wiki/SafeHaskell) pragma at the beginning of every module, unless you have explicit reasons not to. This provides certain guarantees so that another module can import your module knowing that your module cannot cause effects that are not visible in the types of your module's functions.
+```haskell
+{-# LANGUAGE Safe #-}
+module My.Module
+```
+
 ### Hanging Lambdas
 
 You may or may not indent the code following a "hanging" lambda.  Use
