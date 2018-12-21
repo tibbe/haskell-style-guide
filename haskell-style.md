@@ -6,6 +6,15 @@ this project.  I've tried to cover the major areas of formatting and
 naming.  When something isn't covered by this guide you should stay
 consistent with the code in the other modules.
 
+Every major open-source project has its own style guide: a set of
+conventions (sometimes arbitrary) about how to write code for that
+project.  It is much easier to understand a large codebase when all
+the code in it is in a consistent style.
+
+This project holds the style guidelines I use for my code.  If you are
+modifying a project that was created by me, you may be pointed to this
+style guide.
+
 Formatting
 ----------
 
